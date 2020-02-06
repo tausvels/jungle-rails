@@ -1,2 +1,20 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<h1>Admin::Dashboard</h1>
+<h2>General stats of the store</h2>
+<br>
+<section class="panel">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Total no. of products in Database</th>
+        <th>Total no. of categories for products</th>
+      <th>
+    </thead>
+    <tbody>
+      <tr>
+        <td> <%= @total_products %> </td>
+        <td> <%= @total_category %> (<% @category.each do |cat| %><%= cat.name %>, <% end %>) </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+  
