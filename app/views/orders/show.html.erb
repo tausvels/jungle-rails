@@ -8,12 +8,12 @@
     <h4>Thank you for your order!</h4>
   </div>
 
-  <div>
-    <h4>ORDER SUMMARY</h4>
-    <table>
+  <div class="order-items panel">
+    <h3>ORDER SUMMARY</h3>
+    <table class="table">
       <thead>
         <tr>
-          <th colspan="4">Product</th>
+          <th colspan="2">Product</th>
           <th>Price/Unit</th>
           <th>Total Qty</th>
           <th>Total Price</th>
@@ -21,7 +21,7 @@
       <thead>
       <tbody>
         <% @order.line_items.each do |item| %>
-        <%= render "item", product: item.product, quantity: item[:quantity].to_i %>
+        <%= render "item", product: item.product, quantity: item.quantity.to_i %>
         <% end %>
       </tbody>
       <tfoot>
