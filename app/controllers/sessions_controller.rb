@@ -13,7 +13,11 @@ class SessionsController < ApplicationController
       redirect_to '/'
     else
     # If user's login doesn't work, send them back to the login form.
-      redirect_to '/login'
+      # if params[:email] || params[:password]
+        flash[:notice] = "Invalid username/password combination"
+        # redirect_to '/login'
+        render :new, notice: "Oh no"
+      # end
     end
   end
 
