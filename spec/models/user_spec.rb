@@ -3,7 +3,11 @@ require "user.rb"
 
 RSpec.describe User, type: :model do
     subject {
-      described_class.new(name: "tausif", email: "abc@gmail.com", password: "abc", password_confirmation: "abc")
+      described_class.new(
+        name: "tausif", 
+        email: "abc@gmail.com", 
+        password: "abcdef", 
+        password_confirmation: "abcdef")
     }
     describe "validations" do
       it "user is valid" do
@@ -15,6 +19,8 @@ RSpec.describe User, type: :model do
         # )
         expect(subject).to be_valid
       end
+      
+
     end
 
 end
