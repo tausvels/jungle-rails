@@ -15,7 +15,7 @@ RSpec.feature "Visitor navigates to home page", type: :feature, js: true do
       )
     end
 
-  scenario "They see all products" do
+  scenario "My Cart updates with a single item in the basket" do
     # ACT
     visit root_path
     expect(page).to have_content("My Cart (0)")
