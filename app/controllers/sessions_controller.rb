@@ -15,6 +15,7 @@ class SessionsController < ApplicationController
       # if params[:email] || params[:password]
         flash[:notice] = "Invalid username/password combination"
         # redirect_to '/login'
+        render :new
       # end
     end
   end
