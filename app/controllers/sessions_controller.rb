@@ -15,13 +15,13 @@ class SessionsController < ApplicationController
       # if params[:email] || params[:password]
         flash[:notice] = "Invalid username/password combination"
         # redirect_to '/login'
-        render :new, notice: "Oh snap"
       # end
     end
   end
 
   def destroy
     session[:user_id] = nil
+    flash[:notice] = "Please sign in"
     redirect_to "/login"
   end
 

@@ -9,6 +9,7 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect_to "/"
     else
+      flash[:notice] = "Invalid credentials used to sign up."
       redirect_to "/signup"
     end
   end
